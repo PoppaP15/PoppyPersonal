@@ -24,6 +24,14 @@ class projectType:
             durationMultiplier = 2.3
         return durationMultiplier
     
+## Might need this might not just depending on what I want to do 
+    
+# class crochet(projectType):
+
+#     def __init__(self):
+#         super.__init__(self.name)
+
+    
         
         
 

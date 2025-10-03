@@ -48,7 +48,7 @@ class todos:
 
     def exepected_Duration(self):
         ## finds expected duration for a project because my brain be straight lying
-        expected_duration = self.duration * mySchedule.myPType.get_Multiplier()
+        expected_duration = self.duration * mySchedule ## need to fix this this shit ain't working
         return expected_duration
 
 
