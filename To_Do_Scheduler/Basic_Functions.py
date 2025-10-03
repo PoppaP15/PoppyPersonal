@@ -1,5 +1,5 @@
 from datetime import date, time, datetime
-from Project_Type import projectType
+import Scheduler
 import math
 
 
@@ -21,11 +21,13 @@ import math
 global Progress_Checkin
 global Scheduled_Time
 
-myProject = projectType()
+mySchedule = Scheduler
 
 
 
-class myTodos:
+
+
+class theTodos:
 
     isTaskDone = False
     durationMultiplier = 1.5
@@ -45,7 +47,7 @@ class myTodos:
 
     def exepected_Duration(self):
         ## finds expected duration for a project because my brain be straight lying
-        expected_duration = self.duration * myProject.get_Multiplier()
+        expected_duration = self.duration * mySchedule.myProject.get_Multiplier()
         return expected_duration
 
 
@@ -64,7 +66,7 @@ class myTodos:
 
 
 
-class myEvents:
+class theEvents:
 
     def __init__(self, date, name, location, things_to_remember):
         self.date = date 
