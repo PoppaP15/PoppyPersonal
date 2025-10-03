@@ -1,4 +1,6 @@
 from datetime import date, time, datetime
+from Project_Type import projectType
+import math
 
 
 ## this is my todo list for myself
@@ -19,6 +21,8 @@ from datetime import date, time, datetime
 global Progress_Checkin
 global Scheduled_Time
 
+myProject = projectType()
+
 
 
 class myTodos:
@@ -26,39 +30,34 @@ class myTodos:
     isTaskDone = False
     durationMultiplier = 1.5
     
-    def __init__(self, due_date, project_type, duration, material):
+    def __init__(self, due_date, project_type, duration):
     ## Given the
    
         self.due_date = due_date
         self.project_type = project_type
         self.duration = duration
-        self.material = material
-
-    def find_due_date():
-        ## Todo: from the front end communicate to python so I can find a date
-        pass
-
-    def find_Project_Type():
-        # if (self.project_type = "crochet"):
-        #     durationMultiplier = 1.75
-        #     return durationMultiplier
-        pass        
         
 
-    def exepected_Duration():
-        ## finds expected duration for a project because my brain be straight lying
+    def find_due_date(self):
+        ## Todo: from the front end communicate to python so I can find a date
         pass
+         
+
+    def exepected_Duration(self):
+        ## finds expected duration for a project because my brain be straight lying
+        expected_duration = self.duration * myProject.get_Multiplier()
+        return expected_duration
 
 
-    def progress_Checkin_function():
+    def progress_Checkin_function(self):
         ## has a progress checkin based on duedate, projecttype and expected duration
         pass
 
-    def set_up_time():
+    def set_up_time(self):
         ## time to set something up really depending on project type and materials
         pass
     
-    def close_Task():
+    def close_Task(self):
         isTaskDone = True
         return isTaskDone
 
@@ -78,7 +77,9 @@ class myEvents:
 class otherActivities:
 
     def __init__(self, activity_type, duration, drive_time):
-        pass
+        self.activity_type = activity_type
+        self.duration = duration
+        self.drive_time = drive_time
 
 
     
