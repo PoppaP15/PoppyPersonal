@@ -23,11 +23,12 @@ global Scheduled_Time
 
 mySchedule = Scheduler
 
+listOfProjects = []
+listOfTasks = []
 
 
 
-
-class theTodos:
+class todos:
 
     isTaskDone = False
     durationMultiplier = 1.5
@@ -47,7 +48,7 @@ class theTodos:
 
     def exepected_Duration(self):
         ## finds expected duration for a project because my brain be straight lying
-        expected_duration = self.duration * mySchedule.myProject.get_Multiplier()
+        expected_duration = self.duration * mySchedule.myPType.get_Multiplier()
         return expected_duration
 
 
@@ -62,11 +63,16 @@ class theTodos:
     def close_Task(self):
         isTaskDone = True
         return isTaskDone
+    
+
+class projects: 
+    def add_Project(self):
+        pass
 
 
 
 
-class theEvents:
+class events:
 
     def __init__(self, date, name, location, things_to_remember):
         self.date = date 

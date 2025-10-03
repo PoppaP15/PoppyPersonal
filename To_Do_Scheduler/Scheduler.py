@@ -1,10 +1,12 @@
 from datetime import date, time, datetime
 from Project_Type import projectType
-from Basic_Functions import theTodos, theEvents,otherActivities
+from Basic_Functions import todos, events, projects,otherActivities
 import math
 
 
-myProject = projectType()
-myTodos = theTodos()
-myEvents = theEvents()
+
+myPType = projectType()
+myTodos = todos()
+myEvents = events()
+myProjects = projects
 myOtherActivities = otherActivities()
