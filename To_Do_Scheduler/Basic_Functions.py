@@ -24,6 +24,7 @@ global Scheduled_Time
 class myTodos:
 
     isTaskDone = False
+    durationMultiplier = 1.5
     
     def __init__(self, due_date, project_type, duration, material):
     ## Given the
@@ -37,9 +38,15 @@ class myTodos:
         ## Todo: from the front end communicate to python so I can find a date
         pass
 
+    def find_Project_Type():
+        # if (self.project_type = "crochet"):
+        #     durationMultiplier = 1.75
+        #     return durationMultiplier
+        pass        
+        
+
     def exepected_Duration():
         ## finds expected duration for a project because my brain be straight lying
-
         pass
 
 
