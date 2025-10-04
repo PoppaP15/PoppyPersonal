@@ -42,7 +42,7 @@ class Tasks:
      def add_Task(self):
          ## So I need to save the names, duedate, project type, and duration
          ## They need to keep that information and when necessary be able to update that information
-         ## might want to use touples to store this info
+         ## might want to use touples to store this info or dictionaries
          listOfTasks.append(self.name)
         
 
@@ -98,6 +98,9 @@ class projects:
 class events:
 
     ## I need to have something to prompt me to do in preparation to this event
+    ## make seperate .py file for events
+    ## maybe have a calendar that I can input events into and it will prompt me to do things
+    ## like if I have a wedding in 2 months it will prompt me to get a gift, get a dress, get a hotel room, etc
 
     def __init__(self, date, name, location, preparations):
         self.date = date 
@@ -111,6 +114,10 @@ class events:
 class otherActivities:
 
     ## this can be like gym, writing, or things that I want to do that don't necessarily have to
+    ## be done but I want to make sure I have time for them
+    ## maybe have a way to input how often I want to do these things and it will schedule them in
+    ## like if I want to go to the gym 3 times a week it will find time in my schedule to do that
+    ## make seperate .py file for other activities
 
     def __init__(self, activity_type, duration, drive_time):
         self.activity_type = activity_type
