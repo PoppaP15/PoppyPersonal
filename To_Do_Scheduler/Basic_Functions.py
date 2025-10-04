@@ -42,6 +42,7 @@ class Tasks:
      def add_Task(self):
          ## So I need to save the names, duedate, project type, and duration
          ## They need to keep that information and when necessary be able to update that information
+         ## might want to use touples to store this info
          listOfTasks.append(self.name)
         
 
@@ -74,14 +75,20 @@ class Tasks:
 
 
 class todos(Tasks):
-    
+
+    ## Todos are something like setting up my credit card, setting up my roth IRA, and things like that
+    ## Some household tasks are to be included in here
+
     def __init__(self):
         super.__init__(self.name)
+        super.__init__(self.duration)
 
    
     
 
 class projects: 
+
+    ## for my hundred plus crochet projects, sewing projects, and whatever else I do
     def __init__(self):
         super.__init__(self.name)
 
@@ -90,15 +97,20 @@ class projects:
 
 class events:
 
-    def __init__(self, date, name, location, things_to_remember):
+    ## I need to have something to prompt me to do in preparation to this event
+
+    def __init__(self, date, name, location, preparations):
         self.date = date 
         self.name = name
         self.location = location
-        self.thigs_to_remember = things_to_remember
+        self.preparations = preparations
+    
 
     
 
 class otherActivities:
+
+    ## this can be like gym, writing, or things that I want to do that don't necessarily have to
 
     def __init__(self, activity_type, duration, drive_time):
         self.activity_type = activity_type

@@ -4,6 +4,8 @@ from datetime import date, time, datetime
 
 class projectType:
 
+    ## this might need to be a subclass of projectType
+
     ## Will have a string that will be passed through 
     # Depending on that string it will have it's own multiplier
     
