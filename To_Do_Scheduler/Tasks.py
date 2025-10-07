@@ -26,17 +26,16 @@ mySchedule = Scheduler
 listOfProjects = []
 listOfTasks = []
 
-class Tasks:
+class task:
      
      isTaskDone = False
      durationMultiplier = 1.5
 
-     def __init__(self, name, due_date, project_type, duration):
+     def __init__(self, name, due_date, duration):
         ## Given the
 
         self.name = name
         self.due_date = due_date
-        self.project_type = project_type
         self.duration = duration
 
      def add_Task(self):
@@ -53,7 +52,7 @@ class Tasks:
 
      def exepected_Duration(self):
         ## finds expected duration for a project because my brain be straight lying
-        expected_duration = self.duration * mySchedule ## need to fix this this shit ain't working
+        expected_duration = self.duration ## * Project_Type ## need to fix this this shit ain't working
         return expected_duration
 
 
@@ -74,58 +73,34 @@ class Tasks:
 
 
 
-class todos(Tasks):
+class todos(task):
 
     ## Todos are something like setting up my credit card, setting up my roth IRA, and things like that
     ## Some household tasks are to be included in here
 
     def __init__(self):
+        ## inherited
         super.__init__(self.name)
+        super.__init__(self.due_date)
         super.__init__(self.duration)
+
 
    
     
 
-class projects: 
+class projects(task): 
 
     ## for my hundred plus crochet projects, sewing projects, and whatever else I do
-    def __init__(self):
+    def __init__(self, project_type):
+        ## inherited
         super.__init__(self.name)
+        super.__init__(self.duration)
+
+        ##innate
+        self.project_type = project_type
 
 
-
-
-class events:
-
-    ## I need to have something to prompt me to do in preparation to this event
-    ## make seperate .py file for events
-    ## maybe have a calendar that I can input events into and it will prompt me to do things
-    ## like if I have a wedding in 2 months it will prompt me to get a gift, get a dress, get a hotel room, etc
-
-    def __init__(self, date, name, location, preparations):
-        self.date = date 
-        self.name = name
-        self.location = location
-        self.preparations = preparations
-    
-
-    
-
-class otherActivities:
-
-    ## this can be like gym, writing, or things that I want to do that don't necessarily have to
-    ## be done but I want to make sure I have time for them
-    ## maybe have a way to input how often I want to do these things and it will schedule them in
-    ## like if I want to go to the gym 3 times a week it will find time in my schedule to do that
-    ## make seperate .py file for other activities
-
-    def __init__(self, activity_type, duration, drive_time):
-        self.activity_type = activity_type
-        self.duration = duration
-        self.drive_time = drive_time
-
-
-    
+      
 
 
 
