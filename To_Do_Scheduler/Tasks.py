@@ -25,6 +25,7 @@ mySchedule = Scheduler
 
 listOfProjects = []
 listOfTasks = []
+listOfTodos = []
 
 class task:
      
@@ -33,6 +34,8 @@ class task:
 
      def __init__(self, name, due_date, duration):
         ## Given the
+        self.project = projects()
+        self.todo = todos()
 
         self.name = name
         self.due_date = due_date
@@ -43,6 +46,8 @@ class task:
          ## They need to keep that information and when necessary be able to update that information
          ## might want to use touples to store this info or dictionaries
          listOfTasks.append(self.name)
+         print(f"Adding new task: {self.name}")
+         return self
         
 
      def find_due_date(self):
@@ -77,27 +82,38 @@ class todos(task):
 
     ## Todos are something like setting up my credit card, setting up my roth IRA, and things like that
     ## Some household tasks are to be included in here
+    listOfTodos = ["Vacuum", "Clean", "Deep Clean", "Washing Dishes", "Laundry", "Trash", "Cat Liter", "Laundry", "Organizing"]
 
-    def __init__(self):
+
+    def __init__(self, name, due_date, duration):
         ## inherited
-        super.__init__(self.name)
-        super.__init__(self.due_date)
-        super.__init__(self.duration)
+        super.__init__(name, due_date, duration)
 
-
+    def add_Todo(self):
+        listOfTodos.append(self.name)
+        print(f"Adding new todo: {self.name}")
+        return self
    
+    def add_notes(self, note):
+        pass 
+        ## might need to create a touple to track notes with the type of tasks
     
+
+   ## For my todos I want to be able to pick between activities like cleaning, washing dishes, laundry, organizing
+   # I also want a space to add my notes     
 
 class projects(task): 
 
     ## for my hundred plus crochet projects, sewing projects, and whatever else I do
-    def __init__(self, project_type):
+    def __init__(self, name, due_date, duration, project_type):
         ## inherited
-        super.__init__(self.name)
-        super.__init__(self.duration)
+        super.__init__(name, due_date, duration, project_type)
 
         ##innate
         self.project_type = project_type
+
+    def add_Project(self):
+        listOfProjects.append(self.name)
 
 
       
