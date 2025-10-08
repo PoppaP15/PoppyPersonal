@@ -41,6 +41,9 @@ class task:
         self.due_date = due_date
         self.duration = duration
 
+     def get_name(self):
+         return self.name
+
      def add_Task(self):
          ## So I need to save the names, duedate, project type, and duration
          ## They need to keep that information and when necessary be able to update that information
@@ -50,14 +53,14 @@ class task:
          return self
         
 
-     def find_due_date(self):
+     def get_Due_Date(self):
         ## Todo: from the front end communicate to python so I can find a date
-        pass
+        return self.due_date
          
 
-     def exepected_Duration(self):
+     def get_Exepected_Duration(self):
         ## finds expected duration for a project because my brain be straight lying
-        expected_duration = self.duration ## * Project_Type ## need to fix this this shit ain't working
+        expected_duration = self.duration ##* self.project ## need to fix this this shit ain't working
         return expected_duration
 
 
@@ -107,10 +110,10 @@ class projects(task):
     ## for my hundred plus crochet projects, sewing projects, and whatever else I do
     def __init__(self, name, due_date, duration, project_type):
         ## inherited
-        super.__init__(name, due_date, duration, project_type)
+        super.__init__(name, due_date, duration)
 
         ##innate
-        self.project_type = project_type
+        self.projectType = project_type()
 
     def add_Project(self):
         listOfProjects.append(self.name)

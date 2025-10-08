@@ -1,8 +1,9 @@
 from datetime import date, time, datetime
+from Tasks import task, projects, todos
 
 
 
-class projectType:
+class projectType(projects):
 
     ## this might need to be a subclass of projectType
 
@@ -10,7 +11,8 @@ class projectType:
     # Depending on that string it will have it's own multiplier
     
     def __init__(self, name, time_multiplier, material):
-        self.name = name
+
+        super.__init__(self, name, due_date, duration)
         self.time_multiplier = time_multiplier
         self.material = material
 

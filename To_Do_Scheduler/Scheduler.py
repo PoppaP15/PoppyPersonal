@@ -14,25 +14,25 @@ class Scheduler:
         ## may need a  month and year of something like that
         pass
 # ## This definetly not right man
-#     def addTask(self):
-#         self.myTask = task()
-#         print("Added new Task {self.mytask.name}")
+    def addTask(self):
+        self.myTask = task()
+        print("Added new Task" + self.myTask.add_Task)
 
-#     def addEvent(self):
-#         self.myEvents = events()
+    def addEvent(self):
+        self.myEvents = events()
 
-#     def addOtherActivities(self):
-#         self.myOtherActivities = otherActivities()
+    def addOtherActivities(self):
+        self.myOtherActivities = otherActivities()
 
-#     def removeTask(self):
-#         self.myTask = task()
-#         print("Added new Task {self.mytask.name}")
+    def removeTask(self):
+        self.myTask = task()
+        print("Added new Task {self.mytask.name}")
 
-#     def removeEvent(self):
-#         self.myEvents = events()
+    def removeEvent(self):
+        self.myEvents = events()
 
-#     def removeOtherActivities(self):
-#         self.myOtherActivities = otherActivities()
+    def removeOtherActivities(self):
+        self.myOtherActivities = otherActivities()
 
     
 
