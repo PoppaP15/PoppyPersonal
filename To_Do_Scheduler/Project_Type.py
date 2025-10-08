@@ -10,7 +10,7 @@ class projectType(projects):
     ## Will have a string that will be passed through 
     # Depending on that string it will have it's own multiplier
     
-    def __init__(self, name, time_multiplier, material):
+    def __init__(self, name, time_multiplier, material, due_date, duration):
 
         super.__init__(self, name, due_date, duration)
         self.time_multiplier = time_multiplier
