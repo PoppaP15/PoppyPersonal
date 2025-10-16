@@ -8,31 +8,24 @@ import math
 class Scheduler:
 
     def __init__(self):
-        # self.myTask = task()
-        # self.myEvents = events()
-        # self.myOtherActivities = otherActivities()
+        self.myTask = []
+        self.myEvents = []
+        self.myOtherActivities = []
         ## may need a  month and year of something like that
         pass
 # ## This definetly not right man
-    def addTask(self):
-        self.myTask = task()
-        print("Added new Task" + self.myTask.add_Task)
+    def add_item(self, item):
+        if isinstance(item, events):
+            self.myEvents.append(item)
+        if isinstance(item, otherActivities):
+            self.myOtherActivities.append(item)
+        if isinstance(item, task):
+            self.myTask.append(item)
 
-    def addEvent(self):
-        self.myEvents = events()
-
-    def addOtherActivities(self):
-        self.myOtherActivities = otherActivities()
-
-    def removeTask(self):
-        self.myTask = task()
-        print("Added new Task {self.mytask.name}")
-
-    def removeEvent(self):
-        self.myEvents = events()
-
-    def removeOtherActivities(self):
-        self.myOtherActivities = otherActivities()
+    def get_upcoming(self):
+        ## return sorted(self.myEvents, key=lambda x: x.due_date)
+        ## need to figure out a way to return multiple lists
+        pass
 
     
 

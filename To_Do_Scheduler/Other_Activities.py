@@ -10,3 +10,12 @@ class otherActivities:
         self.activity_type = activity_type
         self.duration = duration
         self.drive_time = drive_time
+    
+    def get_activity_type(self):
+        return self.activity_type
+    
+    def get_duration(self):
+        return self.duration
+    
+    def get_drive_time(self):
+        return self.drive_time
