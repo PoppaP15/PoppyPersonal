@@ -8,7 +8,7 @@ import math
 class Scheduler:
 
     def __init__(self):
-        self.myTask = []
+        self.myTasks = []
         self.myEvents = []
         self.myOtherActivities = []
         ## may need a  month and year of something like that
@@ -20,12 +20,16 @@ class Scheduler:
         if isinstance(item, otherActivities):
             self.myOtherActivities.append(item)
         if isinstance(item, task):
-            self.myTask.append(item)
+            self.myTasks.append(item)
 
     def get_upcoming(self):
-        ## return sorted(self.myEvents, key=lambda x: x.due_date)
+        sortedEvents = sorted(self.myEvents, key=lambda x: x.due_date)
+        sortedTasks = sorted(self.myTasks, key=lambda x: x.due_date)
+        sortedOtherActivities = sorted(self.myOtherActivities, key=lambda x: x.due_date)
         ## need to figure out a way to return multiple lists
-        pass
+        return print("Upcoming Events: " + sortedEvents, 
+                     "Upcoming Tasks: " + sortedTasks, 
+                     "Upcoming Activities: " + sortedEvents)
 
     
 
