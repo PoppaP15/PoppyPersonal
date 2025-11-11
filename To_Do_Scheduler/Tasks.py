@@ -92,18 +92,16 @@ class todos(task):
         ## inherited
         super.__init__(name, due_date, duration)
 
-    def add_Todo(self):
-        listOfTodos.append(self.name)
-        print(f"Adding new todo: {self.name}")
-        return self
    
     def add_notes(self, note):
         pass 
-        ## might need to create a touple to track notes with the type of tasks
+
+        ## might need to create a touple to track notes with the type of tasks and track where I will need to be doing this
     
 
    ## For my todos I want to be able to pick between activities like cleaning, washing dishes, laundry, organizing
-   # I also want a space to add my notes     
+   # I also want a space to add my notes  
+   # There should something almost like a hashmap   
 
 class projects(task): 
 
