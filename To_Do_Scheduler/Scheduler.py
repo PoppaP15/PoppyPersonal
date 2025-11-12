@@ -7,10 +7,6 @@ import math
 
 class Scheduler:
 
-    InputTask = task
-    InputEvent = events
-    InputLeisure = Leisure
-
     ## This also ain't right man so please fix it BITCH
 
 
@@ -18,6 +14,10 @@ class Scheduler:
         self.myTasks = []
         self.myEvents = []
         self.myActivities = []
+
+        self.InputTask = task()
+        self.InputEvent = events()
+        self.InputLeisure = Leisure()
         ## may need a  month and year of something like that
         pass
     ## This definetly not right man
