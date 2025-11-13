@@ -1,9 +1,9 @@
-from datetime import date, time, datetime
-from Project_Type import projectType
+# from datetime import date, time, datetime
+# from Project_Type import projectType
 from Tasks import task
 from Events import events
 from To_Do_Scheduler.Leisure import Leisure
-import math
+# import math
 
 class Scheduler:
 
@@ -21,13 +21,14 @@ class Scheduler:
         ## may need a  month and year of something like that
         pass
     ## This definetly not right man
-    def add_item(self, item):
-        if isinstance(item, events):
-            self.myEvents.append(item)
-        if isinstance(item, Leisure):
-            self.myActivities.append(item)
-        if isinstance(item, task):
-            self.myTasks.append(item)
+ 
+    def add_item(self, inputItem):
+        if isinstance(inputItem, events):
+            self.myEvents.append(inputItem)
+        elif isinstance(inputItem, Leisure):
+            self.myActivities.append(inputItem)
+        else:
+            self.myTasks.append(inputItem)
 
     def get_upcoming(self):
         sortedEvents = sorted(self.myEvents, key=lambda x: x.due_date)
@@ -41,5 +42,14 @@ class Scheduler:
         return 
 
 
+if __name__ == "__Scheduler__" :
+    Scheduler()
+    Scheduler.add_item(events("Vegas",1,"need to do shit"))
+    Scheduler.add_item(Leisure(8,0,True))
+    Scheduler.add_item(task("2/3/26", 1,6))
+    Scheduler.get_upcoming()
+
     
+
+
 

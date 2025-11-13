@@ -21,7 +21,7 @@ import math
 global Progress_Checkin
 global Scheduled_Time
 
-mySchedule = Scheduler
+mySchedule = Scheduler()
 
 listOfProjects = []
 listOfTasks = []
