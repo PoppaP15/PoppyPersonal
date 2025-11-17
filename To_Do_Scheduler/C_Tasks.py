@@ -1,5 +1,5 @@
 from datetime import date, time, datetime
-from C_Scheduler import Scheduler
+#from C_Scheduler import Scheduler
 import math
 
 
@@ -21,7 +21,7 @@ import math
 global Progress_Checkin
 global Scheduled_Time
 
-mySchedule = Scheduler()
+#mySchedule = Scheduler()
 
 listOfProjects = []
 listOfTasks = []
