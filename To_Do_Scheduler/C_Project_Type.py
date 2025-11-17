@@ -14,6 +14,7 @@ class projectType(projects):
 
         super.__init__(self, name, due_date, duration)
         self.time_multiplier = time_multiplier
+        self.name = name
         self.material = material
 
     def get_name(self):

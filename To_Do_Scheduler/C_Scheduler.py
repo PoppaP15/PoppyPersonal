@@ -15,7 +15,7 @@ class Scheduler:
         self.myEvents = []
         self.myActivities = []
 
-        self.InputTask = task()
+        self.InputTask = task(name="", due_date="", duration="")
         self.InputEvent = events()
         self.InputLeisure = Leisure()
         ## may need a  month and year of something like that
@@ -42,12 +42,12 @@ class Scheduler:
         return 
 
 
-if __name__ == "__Scheduler__" :
-    Scheduler()
-    Scheduler.add_item(events("Vegas",1,"need to do shit"))
-    Scheduler.add_item(Leisure(8,0,True))
-    Scheduler.add_item(task("2/3/26", 1,6))
-    Scheduler.get_upcoming()
+# if __name__ == "__Scheduler__" :
+Scheduler()
+Scheduler.add_item(events("Vegas",1,"need to do shit"))
+Scheduler.add_item(Leisure(8,0,True))
+Scheduler.add_item(task("2/3/26", 1,6))
+Scheduler.get_upcoming()
 
     
 

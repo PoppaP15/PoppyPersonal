@@ -34,7 +34,7 @@ class task:
 
      def __init__(self, name, due_date, duration):
         ## Given the
-        self.project = projects()
+        self.project = projects(name="", due_date="", duration="")
         self.todo = todos()
 
         self.name = name
