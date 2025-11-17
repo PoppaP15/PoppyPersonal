@@ -1,5 +1,5 @@
 from datetime import date, time, datetime
-import Scheduler
+from C_Scheduler import Scheduler
 import math
 
 

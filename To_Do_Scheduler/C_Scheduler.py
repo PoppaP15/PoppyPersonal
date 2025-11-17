@@ -1,8 +1,8 @@
 # from datetime import date, time, datetime
 # from Project_Type import projectType
-from Tasks import task
-from Events import events
-from To_Do_Scheduler.Leisure import Leisure
+from C_Tasks import task
+from C_Events import events
+from C_Leisure import Leisure
 # import math
 
 class Scheduler:
